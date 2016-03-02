@@ -15,6 +15,11 @@ class ViewController: UIViewController {
 
         print("Hello!")
     
+        doSomething()
+    }
+    
+    func doSomething() {
+        print("do some algorithm and computation")
     }
 
 }
