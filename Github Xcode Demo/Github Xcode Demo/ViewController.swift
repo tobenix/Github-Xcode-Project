@@ -14,6 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         print("Hello!")
+        
+        // Added 1st statement on Branch Update-the-UI
     
         doSomething()
     }
