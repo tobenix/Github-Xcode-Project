@@ -14,8 +14,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         print("Hello Paul!")
-        
-        // 2nd change in our commit (hey there)
     
         doSomething()
     }
