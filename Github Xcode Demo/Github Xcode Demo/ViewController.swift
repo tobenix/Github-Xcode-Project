@@ -95,7 +95,8 @@ class ViewController: UIViewController {
         }
     }
 
-    // 8. Open Redirect
+    // 8. Open Redirect (메인 스레드에서 실행되도록 보장)
+    @MainActor
     func vulnerableOpenRedirect(userInput: String) {
         // 사용자가 입력한 URL로 강제 이동 (검증 없음)
         if let url = URL(string: userInput) {
@@ -109,7 +110,7 @@ class ViewController: UIViewController {
         debugPrint("DEBUG: JWT Token: \(jwt)")
     }
 
-    // 10. Out-of-Bounds 접근
+    // 10. Out-of-Bounds 접근 (실행 중 크래시)
     func vulnerableOutOfBoundsAccess() {
         let arr = [1, 2, 3]
         let _ = arr[5] // Index out of range crash
