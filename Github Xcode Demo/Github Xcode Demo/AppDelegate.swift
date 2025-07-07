@@ -13,34 +13,75 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    // 🚨 1) 하드코딩된 API Key (노출)
+    let apiKey = "123456-SECRET-API-KEY"
+
+    // 🚨 2) 하드코딩된 비밀번호 (노출)
+    let adminPassword = "SuperSecretPassword123"
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        // 🚨 3) 민감 정보 로그 출력
+        print("DEBUG: API Key: \(apiKey)")
+        print("DEBUG: Admin password: \(adminPassword)")
+
+        // 🚨 4) HTTPS 검증 비활성화 예시 (만약 NSURLSession 사용 시)
+        if let url = URL(string: "http://example.com/api") {
+            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                if let data = data {
+                    print("Response: \(data)")
+                }
+            }
+            task.resume()
+        }
+
+        // 🚨 5) 안전하지 않은 UserDefaults 저장
+        UserDefaults.standard.set(adminPassword, forKey: "adminPassword")
+
+        // 🚨 6) Hardcoded JWT Token
+        let jwtToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+
+        // 🚨 7) 강제로 크래시 유발 (예외 처리 없음)
+        let numbers = [1, 2, 3]
+        let _ = numbers[5] // Index out of range
+
+        // 🚨 8) 비밀번호 평문으로 파일 저장
+        savePlaintextPassword()
+
         return true
     }
 
+    // 🚨 8) 평문 저장 예시
+    func savePlaintextPassword() {
+        let password = "plaintext-password"
+        let file = "password.txt"
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let fileURL = dir.appendingPathComponent(file)
+            do {
+                try password.write(to: fileURL, atomically: false, encoding: .utf8)
+                print("Saved plaintext password to file: \(fileURL)")
+            } catch {
+                print("Error saving file")
+            }
+        }
+    }
+
     func applicationWillResignActive(application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+        // ...
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        // ...
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
-        // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        // ...
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        // ...
     }
 
     func applicationWillTerminate(application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        // ...
     }
-
-
 }
-
