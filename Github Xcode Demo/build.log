@@ -1,0 +1,55 @@
+[2025-05-30 15:25:44.779 ERROR 1102]
+Compiler execution failed (exit code: 65).
+[2025-05-30 15:25:44.779 ERROR 20667]
+Compiler Output:
+Command line invocation:
+    /Applications/Xcode16.app/Contents/Developer/usr/bin/xcodebuild GCC_PRECOMPILE_PREFIX_HEADER=NO RUN_CLANG_STATIC_ANALYZER=NO -project "Github Xcode Demo.xcodeproj" -scheme "Github Xcode Demo" -configuration debug
+
+User defaults from command line:
+    IDEPackageSupportUseBuiltinSCM = YES
+
+Build settings from command line:
+    GCC_PRECOMPILE_PREFIX_HEADER = NO
+    RUN_CLANG_STATIC_ANALYZER = NO
+
+Prepare packages
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'Github Xcode Demo' in project 'Github Xcode Demo' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode16.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode16.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode16.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/tobenix/dev/Github-Xcode-Project/Github Xcode Demo/Github Xcode Demo/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode16.app/Contents/Developer/usr/bin/ibtool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode16.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode16.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode16.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: cc08e5ebebd7dc2099ef59fa2ff9d733
+Build description path: /Users/tobenix/Library/Developer/Xcode/DerivedData/Github_Xcode_Demo-gqqingiaanublidpswtxpoclliax/Build/Intermediates.noindex/XCBuildData/cc08e5ebebd7dc2099ef59fa2ff9d733.xcbuilddata
+/Users/tobenix/dev/Github-Xcode-Project/Github Xcode Demo/Github Xcode Demo.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.2, but the range of supported deployment target versions is 12.0 to 18.0.99. (in target 'Github Xcode Demo' from project 'Github Xcode Demo')
+/Users/tobenix/dev/Github-Xcode-Project/Github Xcode Demo/Github Xcode Demo.xcodeproj: error: Signing for "Github Xcode Demo" requires a development team. Select a development team in the Signing & Capabilities editor. (in target 'Github Xcode Demo' from project 'Github Xcode Demo')
+error: SWIFT_VERSION '' is unsupported, supported versions are: 4.0, 4.2, 5.0, 6.0. (in target 'Github Xcode Demo' from project 'Github Xcode Demo')
+
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+{ platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Building project Github Xcode Demo with scheme Github Xcode Demo and configuration debug
+(1 failure)
+
+[2025-05-30 15:25:44.857 WARN  20213]
+exit(65)

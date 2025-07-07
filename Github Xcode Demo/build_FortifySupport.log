@@ -1,0 +1,327 @@
+[2025-05-30 15:25:40.746 INFO  ]
+loggerConfig:
+   level:INFO
+   filename:./build.log
+   appendLogFile:true
+   installLoggingPrintStreams:true
+
+   logger:com.fortify.logging.log4j2.LoggerFactory marker:DEV thread:sourceanalyzer-17
+   MDC:{msgId=-1, severity=NONE} NDC:[]
+[2025-05-30 15:25:40.805 INFO  ]
+0 suppressions loaded
+   logger:com.fortify.sca.cmd.CommandLine marker:DEV thread:sourceanalyzer-17
+   MDC:{msgId=-1, severity=NONE} NDC:[]
+[2025-05-30 15:25:40.805 INFO  ]
+0 level adjustments loaded
+   logger:com.fortify.sca.cmd.CommandLine marker:DEV thread:sourceanalyzer-17
+   MDC:{msgId=-1, severity=NONE} NDC:[]
+[2025-05-30 15:25:41.015 INFO  ]
+OpenText SAST (Fortify) 25.2.0.0116 (using JRE 17.0.14)
+Modules:
+.NET Frontend 25.2.0.0116
+.NET and ASP.NET Translators 25.2.0.0116
+AngularJS Translator Utils 25.2.0.0116
+Apex Translator 25.2.0.0116
+Apple Swift/Objective-C Translator 24.20.50800.2185 (swift-5.8 clang-14.0.3)
+Apple Swift/Objective-C Translator 24.20.50900.2185 (swift-5.9 clang-15.0.0)
+Apple Swift/Objective-C Translator 24.20.51000.2185 (swift-5.10 clang-15.0.0)
+Apple Swift/Objective-C Translator 24.41.60000.2222 (swift-6.0 clang-16.0.0)
+Apple Swift/Objective-C Translator 24.41.60002.2222 (swift-6.0.2 clang-16.0.0)
+C/C++ Translator (CTran) 25.2.0.0012
+Flight main!09992_338faf4dca028
+Go Translator 25.2.0.0116 HEAD
+Kotlin Translator 25.2.0.0116
+Legacy Apex Translator 25.2.0.0116
+Legacy Translators 25.2.0.0116
+MSBuild Plugin 25.2.0.0116
+Modified Rhino 25.2.0.0116
+PHP Translator 25.2.0.0116
+Python Translator 25.2.0.0116
+SCA Backend 25.2.0.0116
+SCA Frontend 25.2.0.0116
+SCA Platform 25.2.0.0116
+   logger:com.fortify.sca.Main marker:DEV thread:sourceanalyzer-17
+   MDC:{msgId=-1, severity=INFO_VERBOSE} NDC:[]
+[2025-05-30 15:25:41.017 INFO  ]
+Args:
+["-b", "test", "-logfile", "./build.log", "xcodebuild", "-project", "Github Xcode Demo.xcodeproj", "-scheme", "Github Xcode Demo", "-configuration", "debug"]
+   logger:com.fortify.sca.Main marker:DEV thread:sourceanalyzer-17
+   MDC:{msgId=-1, severity=LOG_STATUS} NDC:[]
+[2025-05-30 15:25:41.018 INFO  ]
+VM Args:
+"-XX:+UseParallelGC -XX:SoftRefLRUPolicyMSPerMB=3000 --add-exports=jdk.management/com.sun.management.internal=ALL-UNNAMED --add-exports=java.base/jdk.internal.misc=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.security.jca=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.util.regex=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/javax.crypto=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED -Xmx30923764532 -Xss16M"
+   logger:com.fortify.sca.Main marker:DEV thread:sourceanalyzer-17
+   MDC:{msgId=-1, severity=LOG_STATUS} NDC:[]
+[2025-05-30 15:25:41.638 INFO  ]
+Front End started
+   logger:com.fortify.sca.frontend.FrontEndSession marker:DEV thread:sourceanalyzer-17
+   MDC:{msgId=-1, severity=LOG_STATUS, step=INIT} NDC:[timerAllFrontEnds]
+[2025-05-30 15:25:44.779 ERROR 1102]
+Compiler execution failed (exit code: 65).
+   logger:com.fortify.sca.util.compilers.XcodebuildScraper marker:USER thread:sourceanalyzer-17
+   MDC:{msgId=1102, prefix=[error]: , severity=ERROR, stderr=true, step=INIT} NDC:[timerAllFrontEnds, timerXcodebuildScraper.initialize]
+[2025-05-30 15:25:44.779 ERROR 20667]
+Compiler Output:
+Command line invocation:
+    /Applications/Xcode16.app/Contents/Developer/usr/bin/xcodebuild GCC_PRECOMPILE_PREFIX_HEADER=NO RUN_CLANG_STATIC_ANALYZER=NO -project "Github Xcode Demo.xcodeproj" -scheme "Github Xcode Demo" -configuration debug
+
+User defaults from command line:
+    IDEPackageSupportUseBuiltinSCM = YES
+
+Build settings from command line:
+    GCC_PRECOMPILE_PREFIX_HEADER = NO
+    RUN_CLANG_STATIC_ANALYZER = NO
+
+Prepare packages
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'Github Xcode Demo' in project 'Github Xcode Demo' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode16.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode16.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode16.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/tobenix/dev/Github-Xcode-Project/Github Xcode Demo/Github Xcode Demo/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode16.app/Contents/Developer/usr/bin/ibtool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode16.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode16.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode16.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: cc08e5ebebd7dc2099ef59fa2ff9d733
+Build description path: /Users/tobenix/Library/Developer/Xcode/DerivedData/Github_Xcode_Demo-gqqingiaanublidpswtxpoclliax/Build/Intermediates.noindex/XCBuildData/cc08e5ebebd7dc2099ef59fa2ff9d733.xcbuilddata
+/Users/tobenix/dev/Github-Xcode-Project/Github Xcode Demo/Github Xcode Demo.xcodeproj: warning: The iOS deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 9.2, but the range of supported deployment target versions is 12.0 to 18.0.99. (in target 'Github Xcode Demo' from project 'Github Xcode Demo')
+/Users/tobenix/dev/Github-Xcode-Project/Github Xcode Demo/Github Xcode Demo.xcodeproj: error: Signing for "Github Xcode Demo" requires a development team. Select a development team in the Signing & Capabilities editor. (in target 'Github Xcode Demo' from project 'Github Xcode Demo')
+error: SWIFT_VERSION '' is unsupported, supported versions are: 4.0, 4.2, 5.0, 6.0. (in target 'Github Xcode Demo' from project 'Github Xcode Demo')
+
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+{ platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+** BUILD FAILED **
+
+
+The following build commands failed:
+	Building project Github Xcode Demo with scheme Github Xcode Demo and configuration debug
+(1 failure)
+
+   logger:com.fortify.sca.util.compilers.XcodebuildScraper marker:USER thread:sourceanalyzer-17
+   MDC:{msgId=20667, prefix=[error]: , severity=ERROR, stderr=true, step=INIT} NDC:[timerAllFrontEnds, timerXcodebuildScraper.initialize]
+[2025-05-30 15:25:44.854 INFO  ]
+Timers: (elapsed 00:00)
+AllFrontEnds:                                00:00 [1]           00:03 [3146]
+XcodebuildScraper.initialize:                00:03 [3145]        00:03 [3145]
+
+Counters:
+
+Heap: [free:] 604,689,528 [max:] 27,488,944,128 [total:] 649,592,832
+Live NST: [VarDecl:] 0 [FunDecl:] 0
+NST Serializer:  queued: 0  pinned: 0
+NCT Serializer:  queued: 0  pinned: 0
+Task information
+  Completed count:     0
+  Completed time (ms): 0
+Longest tasks (ms):
+
+MxInfo:
+ClassLoadingMXBean: 
+  LoadedClassCount: 5429
+  TotalLoadedClassCount: 5429
+  UnloadedClassCount: 0
+  Verbose: false
+CompilationMXBean: HotSpot 64-Bit Tiered Compilers
+  CompilationTimeMonitoringSupported: true
+  TotalCompilationTime: 1330
+[GarbageCollectorMXBeans]
+  GarbageCollectorMXBean: PS MarkSweep
+    CollectionCount: 1
+    CollectionTime: 17
+    LastGcInfo: GcThreadCount = 1 duration = 18 endTime = 1643 id = 1 startTime = 1625 
+    MemoryPoolNames: [PS Eden Space, PS Survivor Space, PS Old Gen]
+    Valid: true
+  GarbageCollectorMXBean: PS Scavenge
+    CollectionCount: 2
+    CollectionTime: 27
+    LastGcInfo: GcThreadCount = 1 duration = 11 endTime = 1625 id = 2 startTime = 1614 
+    MemoryPoolNames: [PS Eden Space, PS Survivor Space]
+    Valid: true
+MemoryMXBean: 
+  HeapMemoryUsage: init = 536870912(524288K) used = 44903304(43850K) committed = 649592832(634368K) max = 27488944128(26844672K)
+  NonHeapMemoryUsage: init = 7667712(7488K) used = 35764888(34926K) committed = 38731776(37824K) max = -1(-1K)
+  ObjectPendingFinalizationCount: 0
+  Verbose: false
+[MemoryPoolMXBeans]
+  MemoryPoolMXBean: CodeHeap 'non-nmethods'
+    MemoryManagerNames: [CodeCacheManager]
+    PeakUsage: init = 2555904(2496K) used = 1294336(1264K) committed = 2555904(2496K) max = 5840896(5704K)
+    Type: Non-heap memory
+    Usage: init = 2555904(2496K) used = 1270912(1241K) committed = 2555904(2496K) max = 5840896(5704K)
+    UsageThreshold: 0
+    UsageThresholdCount: 0
+    UsageThresholdExceeded: false
+  MemoryPoolMXBean: Metaspace
+    MemoryManagerNames: [Metaspace Manager]
+    PeakUsage: init = 0(0K) used = 24872480(24289K) committed = 25165824(24576K) max = -1(-1K)
+    Type: Non-heap memory
+    Usage: init = 0(0K) used = 24872480(24289K) committed = 25165824(24576K) max = -1(-1K)
+    UsageThreshold: 0
+    UsageThresholdCount: 0
+    UsageThresholdExceeded: false
+  MemoryPoolMXBean: CodeHeap 'profiled nmethods'
+    MemoryManagerNames: [CodeCacheManager]
+    PeakUsage: init = 2555904(2496K) used = 5124352(5004K) committed = 5177344(5056K) max = 122908672(120028K)
+    Type: Non-heap memory
+    Usage: init = 2555904(2496K) used = 5124352(5004K) committed = 5177344(5056K) max = 122908672(120028K)
+    UsageThreshold: 0
+    UsageThresholdCount: 0
+    UsageThresholdExceeded: false
+  MemoryPoolMXBean: PS Old Gen
+    CollectionUsage: init = 358088704(349696K) used = 23397944(22849K) committed = 358088704(349696K) max = 20616577024(20133376K)
+    CollectionUsageThreshold: 0
+    CollectionUsageThresholdCount: 0
+    CollectionUsageThresholdExceeded: false
+    MemoryManagerNames: [PS MarkSweep]
+    PeakUsage: init = 358088704(349696K) used = 23397944(22849K) committed = 358088704(349696K) max = 20616577024(20133376K)
+    Type: Heap memory
+    Usage: init = 358088704(349696K) used = 23397944(22849K) committed = 358088704(349696K) max = 20616577024(20133376K)
+    UsageThreshold: 0
+    UsageThresholdCount: 0
+    UsageThresholdExceeded: false
+  MemoryPoolMXBean: Compressed Class Space
+    MemoryManagerNames: [Metaspace Manager]
+    PeakUsage: init = 0(0K) used = 3196688(3121K) committed = 3342336(3264K) max = 1073741824(1048576K)
+    Type: Non-heap memory
+    Usage: init = 0(0K) used = 3196688(3121K) committed = 3342336(3264K) max = 1073741824(1048576K)
+    UsageThreshold: 0
+    UsageThresholdCount: 0
+    UsageThresholdExceeded: false
+  MemoryPoolMXBean: PS Survivor Space
+    CollectionUsage: init = 22020096(21504K) used = 0(0K) committed = 22020096(21504K) max = 22020096(21504K)
+    CollectionUsageThreshold: 0
+    CollectionUsageThresholdCount: 0
+    CollectionUsageThresholdExceeded: false
+    MemoryManagerNames: [PS MarkSweep, PS Scavenge]
+    PeakUsage: init = 22020096(21504K) used = 21991776(21476K) committed = 22020096(21504K) max = 22020096(21504K)
+    Type: Heap memory
+    Usage: init = 22020096(21504K) used = 0(0K) committed = 22020096(21504K) max = 22020096(21504K)
+  MemoryPoolMXBean: PS Eden Space
+    CollectionUsage: init = 134742016(131584K) used = 0(0K) committed = 269484032(263168K) max = 10263986176(10023424K)
+    CollectionUsageThreshold: 0
+    CollectionUsageThresholdCount: 0
+    CollectionUsageThresholdExceeded: false
+    MemoryManagerNames: [PS MarkSweep, PS Scavenge]
+    PeakUsage: init = 134742016(131584K) used = 134742016(131584K) committed = 269484032(263168K) max = 10263986176(10023424K)
+    Type: Heap memory
+    Usage: init = 134742016(131584K) used = 21505360(21001K) committed = 269484032(263168K) max = 10263986176(10023424K)
+  MemoryPoolMXBean: CodeHeap 'non-profiled nmethods'
+    MemoryManagerNames: [CodeCacheManager]
+    PeakUsage: init = 2555904(2496K) used = 1337344(1306K) committed = 2555904(2496K) max = 122908672(120028K)
+    Type: Non-heap memory
+    Usage: init = 2555904(2496K) used = 1337344(1306K) committed = 2555904(2496K) max = 122908672(120028K)
+    UsageThreshold: 0
+    UsageThresholdCount: 0
+    UsageThresholdExceeded: false
+OperatingSystemMXBean: Mac OS X
+  Arch: x86_64
+  AvailableProcessors: 10
+  CommittedVirtualMemorySize: 69573488640
+  CpuLoad: 0.0
+  FreeMemorySize: 108056576
+  FreePhysicalMemorySize: 108130304
+  FreeSwapSpaceSize: 0
+  MaxFileDescriptorCount: 1048576
+  OpenFileDescriptorCount: 170
+  ProcessCpuLoad: 0.0
+  ProcessCpuTime: 3288705000
+  SystemCpuLoad: NaN
+  SystemLoadAverage: 0.986328125
+  TotalMemorySize: 34359738368
+  TotalPhysicalMemorySize: 34359738368
+  TotalSwapSpaceSize: 0
+  Version: 15.3.1
+ThreadMXBean: 
+  CurrentThreadAllocatedBytes: 117276728
+  CurrentThreadCpuTime: 1398077000
+  CurrentThreadUserTime: 1263210000
+  DaemonThreadCount: 9
+  ObjectMonitorUsageSupported: true
+  PeakThreadCount: 13
+  SynchronizerUsageSupported: true
+  ThreadAllocatedMemoryEnabled: true
+  ThreadAllocatedMemorySupported: true
+  ThreadCount: 11
+  TotalStartedThreadCount: 15
+  TotalThreadAllocatedBytes: 140817160
+  Thread 1 [main]
+    ThreadCpuTime: 226280000
+    ThreadUserTime: 192989000
+  Thread 2 [Reference Handler]
+    ThreadCpuTime: 773000
+    ThreadUserTime: 573000
+  Thread 3 [Finalizer]
+    ThreadCpuTime: 832000
+    ThreadUserTime: 690000
+  Thread 4 [Signal Dispatcher]
+    ThreadCpuTime: 27000
+    ThreadUserTime: 13000
+  Thread 12 [Common-Cleaner]
+    ThreadCpuTime: 2313000
+    ThreadUserTime: 1841000
+  Thread 13 [Notification Thread]
+    ThreadCpuTime: 25000
+    ThreadUserTime: 11000
+  Thread 17 [sourceanalyzer]
+    ThreadCpuTime: 1402832000
+    ThreadUserTime: 1267325000
+  Thread 20 [Stream Monitor [out] ]
+    ThreadCpuTime: 359000
+    ThreadUserTime: 261000
+  Thread 21 [Stream Monitor [err] ]
+    ThreadCpuTime: 204000
+    ThreadUserTime: 115000
+  Thread 22 [process reaper]
+    ThreadCpuTime: 1432000
+    ThreadUserTime: 1069000
+  Thread 25 [BC FIPS Entropy Daemon]
+    ThreadCpuTime: 98000
+    ThreadUserTime: 40000
+
+   logger:com.fortify.sca.Main marker:DEV thread:sourceanalyzer-17
+   MDC:{msgId=-1, severity=NONE, step=INIT} NDC:[]
+[2025-05-30 15:25:44.856 INFO  ]
+message id statistics:
+   id:        -1 total:        20 totalSuppressedCount:         0 scope:[]
+   id:     20667 total:         1 totalSuppressedCount:         0 scope:[]
+   id:      1102 total:         1 totalSuppressedCount:         0 scope:[]
+
+   logger:com.fortify.messaging.MessageSuppressor marker:DEV thread:sourceanalyzer-17
+   MDC:{msgId=-1, severity=NONE, step=INIT} NDC:[]
+[2025-05-30 15:25:44.856 INFO  ]
+logger:null  count:11
+   level:ERROR count:2
+   level:INFO count:9
+logger:com.fortify.messaging.MessageSuppressor  count:1
+   level:INFO count:1
+logger:com.fortify.sca.util.compilers.XcodebuildScraper  count:2
+   level:ERROR count:2
+logger:com.fortify.sca.cmd.CommandLine  count:2
+   level:INFO count:2
+logger:com.fortify.logging.log4j2.LoggerFactory  count:1
+   level:INFO count:1
+logger:com.fortify.sca.Main  count:4
+   level:INFO count:4
+logger:com.fortify.sca.frontend.FrontEndSession  count:1
+   level:INFO count:1
+
+   logger:com.fortify.logging.LoggerStats marker:DEV thread:sourceanalyzer-17
+   MDC:{msgId=-1, severity=NONE, step=INIT} NDC:[]
+[2025-05-30 15:25:44.857 WARN  20213]
+exit(65)
+   logger:com.fortify.sca.Main marker:USER thread:main-1
+   MDC:{msgId=20213, severity=INTERNAL_WARNING} NDC:[]
