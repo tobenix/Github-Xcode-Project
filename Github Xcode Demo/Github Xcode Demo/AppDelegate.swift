@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     // 🚨 1) 하드코딩된 API Key (노출)
-    let apiKey = "123456-SECRET-API-KEY"
+    let apiKey = "1234567-SECRET-API-KEY"
 
     // 🚨 2) 하드코딩된 비밀번호 (노출)
     let adminPassword = "SuperSecretPassword123"
